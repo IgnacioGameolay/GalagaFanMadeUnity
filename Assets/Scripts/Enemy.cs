@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float speed = 10f;
     Vector3 moveDirection;
     [SerializeField] float h = 1f;
-    [SerializeField] float v = 0f;
+    [SerializeField] float v = -1f;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +29,9 @@ public class Enemy : MonoBehaviour
     {
         if (collision.CompareTag("Limit"))
         {
-            v -= 0.1f;
-            speed *= -1;
+            v -= 5f;
+            h *= -1;
+            moveDirection.x *= -1;
         }
     }
 }
