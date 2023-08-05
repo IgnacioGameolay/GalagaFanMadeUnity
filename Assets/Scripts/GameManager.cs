@@ -45,12 +45,5 @@ public class GameManager : MonoBehaviour
             time++;
             UIManager.Instance.UpdateUITime(time);
         }
-    }
-
-    public void StartGame()
-    {
-
-    }
-
-    
+    }    
 }
