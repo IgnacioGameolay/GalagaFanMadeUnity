@@ -47,12 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed88d1beea8346640b7faa8c4634adb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
   h: 1
   v: -1
   health: 3
-  fireRate: 1
+  fireRate: 0.5
   enemyBulletPrefab: {fileID: 1971507343617597840, guid: 7aac7297799961e489b7d18d51e05d3e, type: 3}
+  score: 250
 --- !u!61 &4401322603880107732
 BoxCollider2D:
   m_ObjectHideFlags: 0

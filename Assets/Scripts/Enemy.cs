@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] int health = 3;
     [SerializeField] float fireRate = 1f;
     [SerializeField] Transform enemyBulletPrefab;
+    public int score;
     bool canShoot = true;
 
     // Start is called before the first frame update
@@ -59,13 +60,12 @@ public class Enemy : MonoBehaviour
         canShoot = true;
     }
     
-
-
     private void TakeDamage()
     {
         health--;
         if (health <= 0)
         {
+            GameManager.Instance.Score += score;
             Destroy(gameObject);
         }
     }

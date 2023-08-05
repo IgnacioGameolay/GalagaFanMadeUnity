@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        ReadInput();
+            ReadInput();
         Shoot();
         transform.position += (moveDirection.normalized * speed) * Time.deltaTime; 
     }
