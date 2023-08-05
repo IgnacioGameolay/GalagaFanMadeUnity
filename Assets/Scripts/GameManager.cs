@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     [SerializeField] int score;
     [SerializeField] int time;
-
+    [SerializeField] SceneAsset MainMenu;
 
     public int Score
     {
@@ -44,6 +45,11 @@ public class GameManager : MonoBehaviour
             time++;
             UIManager.Instance.UpdateUITime(time);
         }
+    }
+
+    public void StartGame()
+    {
+
     }
 
     
