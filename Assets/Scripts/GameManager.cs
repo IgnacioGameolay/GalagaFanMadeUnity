@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     [SerializeField] int score;
     [SerializeField] int time;
+    [SerializeField] public int wave;
     [SerializeField] SceneAsset MainMenu;
 
     public int Score
@@ -21,6 +22,16 @@ public class GameManager : MonoBehaviour
 
         }
     }
+    public int Wave
+    {
+        get => wave;
+        set
+        {
+            wave = value;
+            UIManager.Instance.UpdateUIWave(wave);
+        }
+    }
+
     private void Awake()
     {
         if (Instance == null)

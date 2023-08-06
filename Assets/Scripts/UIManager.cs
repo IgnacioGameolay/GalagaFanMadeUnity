@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI timeText;
+    [SerializeField] TextMeshProUGUI waveText;
 
     private void Awake()
     {
@@ -26,6 +27,10 @@ public class UIManager : MonoBehaviour
     public void UpdateUITime(int newTime)
     {
         timeText.text = newTime.ToString();
+    }
+    public void UpdateUIWave(int newWave)
+    {
+        waveText.text = newWave.ToString();
     }
 
     public void Play()

@@ -13,7 +13,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] int health = 3;
     [SerializeField] float fireRate = 1f;
     [SerializeField] Transform enemyBulletPrefab;
-    [SerializeField] Transform chooseWave;
     public int score;
     bool canShoot = true;
 
